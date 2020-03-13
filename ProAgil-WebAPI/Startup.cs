@@ -10,8 +10,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using ProAgil.API.Data;
 
-namespace ProAgil_WebAPI
+namespace ProAgil.API
 {
     public class Startup
     {
@@ -25,7 +27,10 @@ namespace ProAgil_WebAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<DataContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddCors();
             services.AddControllers();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,7 +41,9 @@ namespace ProAgil_WebAPI
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 
@@ -46,6 +53,7 @@ namespace ProAgil_WebAPI
             {
                 endpoints.MapControllers();
             });
+
         }
     }
 }

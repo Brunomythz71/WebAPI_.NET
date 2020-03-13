@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace ProAgil_WebAPI.Controllers
+namespace ProAgil.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -14,6 +14,7 @@ namespace ProAgil_WebAPI.Controllers
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+            
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
