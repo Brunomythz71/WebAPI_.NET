@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\brn\\Desktop\\DOTNETCORE_ANGULAR\\ProAgil-WebAPI\\ProAgil-WebAPI.csproj": {}
+    "C:\\Users\\brn\\Desktop\\DOTNETCORE_ANGULAR\\ProAgil-Webapi\\ProAgil-WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\brn\\Desktop\\DOTNETCORE_ANGULAR\\ProAgil-WebAPI\\ProAgil-WebAPI.csproj": {
+    "C:\\Users\\brn\\Desktop\\DOTNETCORE_ANGULAR\\ProAgil-Webapi\\ProAgil-WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\brn\\Desktop\\DOTNETCORE_ANGULAR\\ProAgil-WebAPI\\ProAgil-WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\brn\\Desktop\\DOTNETCORE_ANGULAR\\ProAgil-Webapi\\ProAgil-WebAPI.csproj",
         "projectName": "ProAgil-WebAPI",
-        "projectPath": "C:\\Users\\brn\\Desktop\\DOTNETCORE_ANGULAR\\ProAgil-WebAPI\\ProAgil-WebAPI.csproj",
+        "projectPath": "C:\\Users\\brn\\Desktop\\DOTNETCORE_ANGULAR\\ProAgil-Webapi\\ProAgil-WebAPI.csproj",
         "packagesPath": "C:\\Users\\brn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\brn\\Desktop\\DOTNETCORE_ANGULAR\\ProAgil-WebAPI\\obj\\",
+        "outputPath": "C:\\Users\\brn\\Desktop\\DOTNETCORE_ANGULAR\\ProAgil-Webapi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -38,6 +38,18 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
