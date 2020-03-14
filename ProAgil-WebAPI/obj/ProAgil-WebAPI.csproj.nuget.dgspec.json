@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\brn\\Desktop\\DOTNETCORE_ANGULAR\\ProAgil-Webapi\\ProAgil-WebAPI.csproj": {}
+    "C:\\Users\\brn\\Desktop\\DOTNETCORE_ANGULAR\\ProAgil-webapi\\ProAgil-WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\brn\\Desktop\\DOTNETCORE_ANGULAR\\ProAgil-Webapi\\ProAgil-WebAPI.csproj": {
+    "C:\\Users\\brn\\Desktop\\DOTNETCORE_ANGULAR\\ProAgil-webapi\\ProAgil-WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\brn\\Desktop\\DOTNETCORE_ANGULAR\\ProAgil-Webapi\\ProAgil-WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\brn\\Desktop\\DOTNETCORE_ANGULAR\\ProAgil-webapi\\ProAgil-WebAPI.csproj",
         "projectName": "ProAgil-WebAPI",
-        "projectPath": "C:\\Users\\brn\\Desktop\\DOTNETCORE_ANGULAR\\ProAgil-Webapi\\ProAgil-WebAPI.csproj",
+        "projectPath": "C:\\Users\\brn\\Desktop\\DOTNETCORE_ANGULAR\\ProAgil-webapi\\ProAgil-WebAPI.csproj",
         "packagesPath": "C:\\Users\\brn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\brn\\Desktop\\DOTNETCORE_ANGULAR\\ProAgil-Webapi\\obj\\",
+        "outputPath": "C:\\Users\\brn\\Desktop\\DOTNETCORE_ANGULAR\\ProAgil-webapi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
