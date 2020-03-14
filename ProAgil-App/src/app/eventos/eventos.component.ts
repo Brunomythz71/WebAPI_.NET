@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+
 @Component({
   selector: 'app-eventos',
   templateUrl: './eventos.component.html',
@@ -8,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class EventosComponent implements OnInit {
 
-  eventos : any; //= [
+  eventos : any = []; //= [
   // {
   //   EventoID: 1,
   //   Tema: 'Angular',
