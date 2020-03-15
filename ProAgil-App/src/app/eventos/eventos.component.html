@@ -1,14 +1,21 @@
-<form class="form-inline">
+<div class="form-inline">
   <div class="form-group mb-2">
-    <input type="text" class="form-control mr-2" placeholder="buscar">
-    <button class="btn btn-outline-success">buscar</button>
+    <input type="text" class="form-control mr-2" placeholder="buscar"
+    [(ngModel)]="filtroLista">
+    <!-- <button class="btn btn-outline-success">Buscar</button> -->
   </div>
-</form>
-
+  <div class="float-right">
+    <button class="badge badge-dark">Cadastrar</button>
+  </div>
+</div>
+<h3>Filtro: {{filtroLista}}</h3>
 <table class="table table-striped">
-  <thead class="thead-dark">
+  <thead class="thead-light">
   <tr>
     <th>#</th>
+    <th>
+      <button class="btn btn-outline-primary" (click)="ocutarImagem()">{{exibeImagemTxt}}</button>
+    </th>
     <th>Tema</th>
     <th>Local</th>
     <th>Data</th>
@@ -17,26 +24,32 @@
     <th>Opções</th>
   </tr>
 </thead>
-<tbody *ngIf="eventos != null && eventos.length">
-  <tr *ngFor="let evento of eventos">
+<tbody *ngIf="eventosFiltratos != null && eventosFiltratos.length">
+  <tr *ngFor="let evento of eventosFiltratos">
     <td>{{evento.eventoID}}</td>
+    <td>
+      <img *ngIf="exibeImagem" src="http://localhost:5000/img/{{evento.imagemURL}}"
+      [style.width.px] = "imagemLargura"
+      [style.margin.px] = "imagemMargem">
+    </td>
     <td>{{evento.tema}}</td>
     <td>{{evento.local}}</td>
     <td>{{evento.dataEvento}}</td>
     <td>{{evento.qntPessoas}}</td>
-    <td>{{evento.lote}}</td>
+    <td>{{evento.lote | uppercase}}</td>
     <td>
-      <button class="btn btn-outline-success"></button>
-      <button class="btn btn-outline-danger"></button>
+      <button class="btn btn-outline-success">ALTERAR</button>
+      <button class="btn btn-outline-danger">EXCLUIR</button>
     </td>
   </tr>
 </tbody>
-<tfoot *ngIf="!eventos.length">
+<tfoot *ngIf="!eventosFiltratos.length">
   <tr>
-    <td colspan="4" class="text-center"></td>
+    <td colspan="7" class="text-center">
     <h4>
       Nenhum evento encontrato!
     </h4>
+  </td>
   </tr>
 </tfoot>
 </table>
