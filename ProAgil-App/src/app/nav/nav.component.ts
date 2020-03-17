@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'app-nav',
@@ -9,7 +9,15 @@ export class NavComponent implements OnInit {
 
   constructor() { }
 
+  searchtext : string = '';
+
+  @Input() valueSearch : string;
+
   ngOnInit() {
+  }
+
+  search(value : string){
+    console.log(this.searchtext);
   }
 
 }

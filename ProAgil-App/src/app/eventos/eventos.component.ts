@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { stringify } from 'querystring';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -18,6 +19,9 @@ export class EventosComponent implements OnInit {
   exibeImagem : boolean = true;
   exibeImagemTxt : string = 'OCULTAR IMAGEM';
   _filtroLista : string;
+  searchtext : string;
+
+  @Input() search : string;
 
   get filtroLista() : string{
     return this._filtroLista;
@@ -27,7 +31,7 @@ export class EventosComponent implements OnInit {
     this.eventosFiltratos = !this.filtroLista ? this.eventos : this.buscarEvento(this.filtroLista);
   }
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.getEventos();
